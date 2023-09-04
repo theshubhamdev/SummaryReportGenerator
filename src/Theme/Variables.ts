@@ -17,6 +17,7 @@ import { figmaDimenToRN } from '@/Utils';
 export const Colors = {
   inputBackground: '#FFFFFF',
   transparent: 'rgba(0,0,0,0)',
+  background: "#FFFFFF",
   line: '#D9D9D9',
   black: '#000000',
   white: '#ffffff',

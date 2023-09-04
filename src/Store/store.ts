@@ -1,11 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
-// ...
+import { counterSlice } from './Example'
+import Theme from './Theme'
 
 export const store = configureStore({
   reducer: {
     // posts: postsReducer,
     // comments: commentsReducer,
     // users: usersReducer,
+    counter: counterSlice.reducer,
+    theme: Theme,
   },
 })
 

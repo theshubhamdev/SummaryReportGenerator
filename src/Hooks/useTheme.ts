@@ -51,17 +51,18 @@ export default function() {
 
   // Build the default theme
   const baseTheme: Theme = {
+    // isDarkMode: darkMode || false, 
     Fonts: Fonts( themeVariables ),
     Gutters: Gutters( themeVariables ),
     Images: Images( themeVariables ),
     Layout: Layout( themeVariables ),
-    Common: Common( {
+    Common: Common({
       ...themeVariables,
-      Layout: Layout( themeVariables ),
-      Gutters: Gutters( themeVariables ),
-      Fonts: Fonts( themeVariables ),
-      Images: Images( themeVariables ),
-    } ) as ThemeCommon,
+      Layout: Layout(themeVariables),
+      Gutters: Gutters(themeVariables),
+      Fonts: Fonts(themeVariables),
+      Images: Images(themeVariables),
+    }) as unknown as ThemeCommon,
     ...themeVariables,
   };
 

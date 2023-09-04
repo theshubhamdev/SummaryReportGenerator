@@ -56,6 +56,7 @@ export type ThemeCommon = {
 export type ThemeImages = ReturnType<typeof Images>;
 
 export type Theme = {
+  // isDarkMode: boolean,
   Colors: ThemeColors,
   NavigationColors: ThemeNavigationColors,
   FontSize: ThemeFontSize,

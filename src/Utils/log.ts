@@ -1,18 +1,18 @@
-import analytics from '@react-native-firebase/analytics';
-import crashlytics from '@react-native-firebase/crashlytics';
+// import analytics from '@react-native-firebase/analytics';
+// import crashlytics from '@react-native-firebase/crashlytics';
 
-const logStep = async ( msg: string, params?: { [key: string]: any } ) => {
-  // format msg to snake_case.
-  const msgFormatted = msg.toLowerCase().replace( /\s+/g, '_' ).replace( /[^a-zA-Z0-9_]/g, '' );
-  console.log( msg, params );
-  crashlytics().log( msg );
-  await analytics().logEvent( msgFormatted.substring( 0, 40 ), params );
-};
+// const logStep = async ( msg: string, params?: { [key: string]: any } ) => {
+//   // format msg to snake_case.
+//   const msgFormatted = msg.toLowerCase().replace( /\s+/g, '_' ).replace( /[^a-zA-Z0-9_]/g, '' );
+//   console.log( msg, params );
+//   crashlytics().log( msg );
+//   await analytics().logEvent( msgFormatted.substring( 0, 40 ), params );
+// };
 
-const logDebugStep = ( msg: string ) => {
-  console.log( msg );
-  crashlytics().log( msg );
-};
+// const logDebugStep = ( msg: string ) => {
+//   console.log( msg );
+//   crashlytics().log( msg );
+// };
 
 const trace = ( tracePrefix: string, ...args: any[] ) => {
   const stringifiedLog = args.reduce( ( prevLog, currLog ) => {
@@ -26,7 +26,7 @@ const trace = ( tracePrefix: string, ...args: any[] ) => {
     }
   }, '' );
   console.log( tracePrefix, JSON.stringify( args ) );
-  crashlytics().log( `T_${tracePrefix}: ${stringifiedLog}` );
+  // crashlytics().log( `T_${tracePrefix}: ${stringifiedLog}` );
 };
 
 const traceStoreReducer = ( ...msg: any[] ) => {
@@ -85,7 +85,7 @@ const logErrorStep = ( err: Error | unknown, jsErrorName?: string ) => {
   if( err && typeof err === 'object' && err.hasOwnProperty( 'message' ) ) {
     const msg = ( err as Error ).message;
     console.log( msg );
-    crashlytics().log( msg );
+    // crashlytics().log( msg );
   } else {
     recordError( err, jsErrorName );
   }
@@ -94,15 +94,15 @@ const logErrorStep = ( err: Error | unknown, jsErrorName?: string ) => {
 const recordError = ( err: Error | unknown, jsErrorName?: string ): void => {
   console.log( 'recordError', err, jsErrorName );
   if( err && typeof err === 'object' && err.hasOwnProperty( 'name' ) ) {
-    crashlytics().recordError( err as Error, jsErrorName );
+    // crashlytics().recordError( err as Error, jsErrorName );
   } else {
-    crashlytics().recordError( new Error( 'UNKNOWN_ERROR' ), jsErrorName );
+    // crashlytics().recordError( new Error( 'UNKNOWN_ERROR' ), jsErrorName );
   }
 };
 
 export {
-  logStep,
-  logDebugStep,
+  // logStep,
+  // logDebugStep,
   logErrorStep,
   recordError,
   traceStoreReducer,
