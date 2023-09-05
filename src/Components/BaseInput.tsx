@@ -177,7 +177,7 @@ const BaseInput = <TFormValues extends FieldValues>( {
       default:
         inputStyles.push( styles.input );
         inputStyles.push( {
-          paddingVertical: normalize( 12 ),
+          paddingVertical: normalize( 4 ),
         } );
         break;
     }

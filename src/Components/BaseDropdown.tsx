@@ -218,7 +218,7 @@ const BaseDropdown = <TFormValues extends FieldValues>( {
                   closeAfterSelecting={true}
                   closeOnBackPressed={true}
                   itemSeparator={true}
-                  // dropDownDirection="TOP"
+                  dropDownDirection="BOTTOM"
                   listMode="SCROLLVIEW"
                   scrollViewProps={{
                     keyboardShouldPersistTaps: 'always',

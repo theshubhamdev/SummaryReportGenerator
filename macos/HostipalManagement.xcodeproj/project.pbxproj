@@ -12,6 +12,8 @@
 		514201522437B4B40078DB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514201512437B4B40078DB4F /* Assets.xcassets */; };
 		514201552437B4B40078DB4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514201532437B4B40078DB4F /* Main.storyboard */; };
 		514201582437B4B40078DB4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 514201572437B4B40078DB4F /* main.m */; };
+		6069B7DF2AA735E6004B55A0 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 6069B7DE2AA735E5004B55A0 /* Fonts */; };
+		6069B7E02AA735E6004B55A0 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 6069B7DE2AA735E5004B55A0 /* Fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,7 @@
 		514201562437B4B40078DB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514201572437B4B40078DB4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		514201592437B4B40078DB4F /* HostipalManagement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HostipalManagement.entitlements; sourceTree = "<group>"; };
+		6069B7DE2AA735E5004B55A0 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EFCA88716AA9B7C4BB60C81E /* Pods-HostipalManagement-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HostipalManagement-macOS.release.xcconfig"; path = "Target Support Files/Pods-HostipalManagement-macOS/Pods-HostipalManagement-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		FC152593C1B9ABD161DD8E6E /* libPods-HostipalManagement-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HostipalManagement-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +81,6 @@
 				313EFC0E512A0887D59CD1C6 /* Pods-HostipalManagement-macOS.debug.xcconfig */,
 				EFCA88716AA9B7C4BB60C81E /* Pods-HostipalManagement-macOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -92,6 +94,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6069B7DE2AA735E5004B55A0 /* Fonts */,
 				5142014A2437B4B30078DB4F /* HostipalManagement-macOS */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -196,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6069B7DF2AA735E6004B55A0 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6069B7E02AA735E6004B55A0 /* Fonts in Resources */,
 				514201522437B4B40078DB4F /* Assets.xcassets in Resources */,
 				514201552437B4B40078DB4F /* Main.storyboard in Resources */,
 			);
