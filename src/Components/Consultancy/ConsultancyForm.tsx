@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useTheme } from "@/Hooks";
@@ -7,6 +7,8 @@ import DatePickerNativeInput from "../DatePickerNativeInput";
 import BaseDropdown from "../BaseDropdown";
 import CreateSymptomsForm from "./CreateSymptomsForm";
 import CreateTreatmentForm from "./CreateTreatmentForm";
+import RNPrint from "react-native-print";
+import RNHTMLtoPDF from "react-native-html-to-pdf";
 
 interface Readings {
   pulse: string;
@@ -81,12 +83,23 @@ const ConsultancyForm = () => {
       ],
     },
   });
+
+  const handleSubmit = async () => {
+    const results = await RNHTMLtoPDF.convert({
+      html: "<h1>Custom converted PDF Document</h1>",
+      fileName: "test",
+      base64: true,
+    });
+
+    await RNPrint.print({ filePath: results.filePath });
+  };
+
   return (
     <ScrollView style={[Gutters.regularHMargin]}>
       <View style={[Layout.alignItemsEnd]}>
         <DatePickerNativeInput name="date" control={control} show={false} />
+        <Button title="Submit" onPress={handleSubmit} />
       </View>
-
       <View style={[Layout.row]}>
         <BaseInput
           name="name"
@@ -113,12 +126,12 @@ const ConsultancyForm = () => {
           containerStyle={[Layout.fill, Gutters.regularHPadding]}
         />
       </View>
-      <View style={[Layout.row, Gutters.regularVPadding, {zIndex: -1}]}>
+      <View style={[Layout.row, Gutters.regularVPadding, { zIndex: -1 }]}>
         <BaseInput
           name="readings.bp"
           control={control}
           placeholder="BP"
-          containerStyle={[ Layout.fill, Gutters.regularHPadding]}
+          containerStyle={[Layout.fill, Gutters.regularHPadding]}
           label="BP"
         />
         <BaseInput

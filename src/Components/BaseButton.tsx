@@ -25,7 +25,7 @@ interface Props {
 }
 
 const BaseButton: FC<Props> = ( { text, disabled, textSize, onPress, type, hollow, iconPrefix, IconPrefixSvg: IconPrefixSvg, iconPrefixSvgProps, buttonStyles, loading, viewStyle } ) => {
-  const { Fonts, Layout, Gutters, Images } = useTheme();
+  const { Fonts, Layout, Gutters } = useTheme();
 
   const buttonColor = useMemo( () => {
     let color: LinearGradientProps[ 'colors' ];

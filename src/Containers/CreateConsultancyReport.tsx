@@ -1,26 +1,22 @@
 import { Button, StyleSheet, View } from "react-native";
 import React from "react";
-import { BaseButton, BaseText } from "@/Components";
+import { BaseText } from "@/Components";
 import { useTheme } from "@/Hooks";
-import { useNavigation } from "@react-navigation/native";
+import ConsultancyForm from "@/Components/Consultancy/ConsultancyForm";
 
-const Home = () => {
+const CreateConsultancyReport = () => {
   const { Layout, Gutters, Fonts } = useTheme();
 
-  const navigation = useNavigation();
   return (
     <View style={[Layout.fullHeight]}>
       <View style={[Layout.alignItemsCenter, Gutters.regularPadding]}>
         <BaseText style={[Fonts.sz20]}>M.S.M. Hospital</BaseText>
       </View>
-      <Button
-        title="Create Consultancy Report"
-        onPress={() => navigation.navigate("CreateConsultancyReport")}
-      />
+      <ConsultancyForm />
     </View>
   );
 };
 
-export default Home;
+export default CreateConsultancyReport;
 
 const styles = StyleSheet.create({});
