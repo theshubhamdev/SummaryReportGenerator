@@ -1,4 +1,4 @@
-import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Button, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useTheme } from "@/Hooks";
@@ -9,6 +9,8 @@ import CreateSymptomsForm from "./CreateSymptomsForm";
 import CreateTreatmentForm from "./CreateTreatmentForm";
 import RNPrint from "react-native-print";
 import RNHTMLtoPDF from "react-native-html-to-pdf";
+import { useNavigation } from "@react-navigation/native";
+import ReactNativePrint from 'react-native-print';
 
 interface Readings {
   pulse: string;
@@ -51,6 +53,7 @@ export interface IFormDetails {
 const ConsultancyForm = () => {
   const { Layout, Gutters, Fonts } = useTheme();
 
+  const navigation = useNavigation();
   const { control } = useForm<IFormDetails>({
     defaultValues: {
       name: "",
@@ -85,14 +88,8 @@ const ConsultancyForm = () => {
   });
 
   const handleSubmit = async () => {
-    const results = await RNHTMLtoPDF.convert({
-      html: "<h1>Custom converted PDF Document</h1>",
-      fileName: "test",
-      base64: true,
-    });
-
-    await RNPrint.print({ filePath: results.filePath });
-  };
+    // navigation.navigate("PrintPreview")
+    }
 
   return (
     <ScrollView style={[Gutters.regularHMargin]}>

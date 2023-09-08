@@ -3,6 +3,7 @@ import React from "react";
 import CreateConsultancyReport from "@/Containers/CreateConsultancyReport";
 import Home from "@/Containers/Home";
 import { createStackNavigator } from "@react-navigation/stack";
+import PrintPreview from "@/Containers/PrintPreview";
 
 const Navigation = () => {
   const Stack = createStackNavigator();
@@ -18,6 +19,10 @@ const Navigation = () => {
       <Stack.Screen
         name="CreateConsultancyReport"
         component={CreateConsultancyReport}
+      />
+      <Stack.Screen
+        name="PrintPreview"
+        component={PrintPreview}
       />
     </Stack.Navigator>
   );

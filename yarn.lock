@@ -2147,6 +2147,11 @@
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
   "version" "15.7.5"
 
+"@types/react-native-html-to-pdf@^0.8.1":
+  "integrity" "sha512-DP2buc/3EOkH7uGYL0WTkQb8iG6gTVSrcTTNEqOmE/PGEgs6BKvBHRiTn83++rtWWYhMii97wLu3gs61K35b7A=="
+  "resolved" "https://registry.npmjs.org/@types/react-native-html-to-pdf/-/react-native-html-to-pdf-0.8.1.tgz"
+  "version" "0.8.1"
+
 "@types/react-native-vector-icons@^6.4.14":
   "integrity" "sha512-3RaEadfUUImrDed03hwRnYp5QFevcWkWgPUHxj9U9lB6G5uPEGaxXoLWdjgioQ46CvADXUzrDOEYLSVcAn1GQw=="
   "resolved" "https://registry.npmjs.org/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.14.tgz"
@@ -3703,6 +3708,11 @@
   "resolved" "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   "version" "4.0.0"
 
+"escape-string-regexp@2.0.0":
+  "integrity" "sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w=="
+  "resolved" "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz"
+  "version" "2.0.0"
+
 "eslint-config-prettier@^8.5.0":
   "integrity" "sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg=="
   "resolved" "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-8.10.0.tgz"
@@ -4638,7 +4648,7 @@
   "resolved" "https://registry.npmjs.org/interpret/-/interpret-1.4.0.tgz"
   "version" "1.4.0"
 
-"invariant@*", "invariant@^2.2.4":
+"invariant@*", "invariant@^2.2.4", "invariant@2.2.4":
   "integrity" "sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA=="
   "resolved" "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
   "version" "2.2.4"
@@ -7027,6 +7037,14 @@
   dependencies:
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
+
+"react-native-webview@^13.5.1":
+  "integrity" "sha512-SZQJqFUMxYYj1xYWy1Z48WcHpqOGvbXKS5R1cnaLQY/JxefS+1NOVMqWxy1Zwmc128vqtRklES8l9Jus8tKSLg=="
+  "resolved" "https://registry.npmjs.org/react-native-webview/-/react-native-webview-13.5.1.tgz"
+  "version" "13.5.1"
+  dependencies:
+    "escape-string-regexp" "2.0.0"
+    "invariant" "2.2.4"
 
 "react-native-windows@>=0.62", "react-native-windows@0.71.36":
   "integrity" "sha512-nVNt1gllr9iv/zQh6oaQLlWpGp4cw8Um9+OpIMIDjSe+thTWLzFXq8kogb/npVAlyoyFVC8NK/S6B2B2AgIBXQ=="
